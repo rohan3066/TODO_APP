@@ -1,0 +1,173 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #e0e0e0; /* Light text for contrast */
+  }
+  
+  /* Container for the Todo App */
+  .todo-container {
+    width: 650px; /* Slightly larger container */
+    min-height: 650px; /* Increased height */
+    background-color: #1e1e1e; /* Darker background for container */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border-top: 5px solid #333; /* Darker border for a clean look */
+  }
+  
+  /* Heading */
+  .todo-container h1 {
+    font-size: 32px; /* Larger font size */
+    text-align: center;
+    color: #81a1c1; /* Light blue for heading */
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #444; /* Dark border for separation */
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  /* Input field styling */
+  .todo-container input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px; /* Slightly increased space between input and buttons */
+    border: 1px solid #444;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    background-color: #2c2c2c; /* Dark background for input */
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  .todo-container input:focus {
+    border-color: #81a1c1; /* Light blue focus border */
+  }
+  
+  /* Buttons Container */
+  .todo-container .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Slightly increased space between buttons */
+    align-items: flex-end;
+  }
+  
+  /* Buttons */
+  .todo-container button {
+    padding: 12px 28px;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Darker shadow for buttons */
+  }
+  
+  /* Button hover effects */
+  .todo-container button:hover {
+    opacity: 0.85;
+  }
+  
+  /* Button Colors */
+  .todo-container .add-task-btn {
+    background-color: #4caf50; /* Green button */
+    color: #fff;
+  }
+  
+  .todo-container .delete-btn {
+    background-color: #f44336; /* Red button */
+    color: #fff;
+  }
+  
+  .todo-container .uppercase-btn {
+    background-color: #1e88e5; /* Blue button */
+    color: #fff;
+  }
+  
+  .todo-container .lowercase-btn {
+    background-color: #ffeb3b; /* Yellow button */
+    color: #333;
+  }
+  
+  .todo-container .uppercase-all-btn,
+  .todo-container .lowercase-all-btn {
+    background-color: #0288d1; /* Lighter blue button */
+    color: #fff;
+    width: 48%;
+    display: inline-block;
+    margin: 10px 1%;
+    margin-right: 25%; /* Small gap between these two buttons */
+    box-shadow: none;
+  }
+  
+  /* Task List Styling */
+  .todo-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto; /* Add scroll if content overflows */
+    max-height: 400px; /* Limit the height of the task list */
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .todo-container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c2c2c; /* Dark background for tasks */
+    border: 1px solid #444;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for tasks */
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Hover effect for task card */
+  .todo-container ul li:hover {
+    transform: scale(1.02); /* Slight hover effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Light shadow around task on hover */
+    border: 1px solid #81a1c1; /* Optional border color on hover */
+  }
+  
+  .todo-container ul li span {
+    flex-grow: 1;
+    margin-right: 10px;
+    color: #e0e0e0; /* Light text color for tasks */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Scrollbar Styling */
+  .todo-container ul::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .todo-container ul::-webkit-scrollbar-thumb {
+    background-color: #81a1c1; /* Light blue scrollbar */
+    border-radius: 3px;
+  }
+  
+  .todo-container ul::-webkit-scrollbar-track {
+    background-color: #333; /* Dark scrollbar track */
+  }
+  
